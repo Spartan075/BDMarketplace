@@ -13,10 +13,9 @@ namespace BDMarketplace.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
+        public ActionResult About() {
+            string currentTime = DateTime.Now.ToLongTimeString();
+            ViewBag.Message = "The current time is " + currentTime;
             return View();
         }
 
